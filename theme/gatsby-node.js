@@ -1,21 +1,14 @@
-exports.createPages = ({ actions, reporter }) => {
-  reporter.warn("make sure to load data from somewhere!")
+const createPosts = require(`./utils/createPosts`)
+const createSitePages = require(`./utils/createSitePages`)
+const createCategories = require(`./utils/createCategories`)
+const createTags = require(`./utils/createTags`)
+const createUsers = require(`./utils/createUsers`)
 
-  // TODO replace this with data from somewhere
-  actions.createPage({
-    path: "/",
-    component: require.resolve("./src/templates/page.js"),
-    context: {
-      heading: "Your Theme Here",
-      content: `
-        <p>
-          Use this handy theme example as the basis for your own amazing theme!
-        </p>
-        <p>
-          For more information, see 
-          <a href="https://themejam.gatsbyjs.org">themejam.gatsbyjs.org</a>.
-        </p>
-      `,
-    },
-  })
+exports.createPages = async ({ actions, graphql, reporter }, options) => {
+  reporter.warn("make sure to load data from somewhere!")
+  await createPosts({ actions, graphql }, options)
+  await createSitePages({ actions, graphql }, options)
+  await createCategories({ actions, graphql }, options)
+  await createTags({ actions, graphql }, options)
+  await createUsers({ actions, graphql }, options)
 }
