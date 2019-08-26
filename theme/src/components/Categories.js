@@ -10,7 +10,7 @@ const Categories = ({ post }) => {
         <span>{categories.length > 1 ? "Categories: " : "Category: "}</span>
       )}
       {categories.map(cat => (
-        <button>
+        <button sx={{ variant: `buttons.primary`, mr: 10 }}>
           <Link
             to={`/category/${cat.slug}`}
             key={cat.id}

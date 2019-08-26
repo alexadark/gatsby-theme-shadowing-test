@@ -1,4 +1,5 @@
 import colors from "./colors"
+import buttons from "./buttons"
 
 const heading = {
   fontFamily: "heading",
@@ -128,9 +129,8 @@ export default {
       maxWidth: `container`,
     },
     ...base,
-  },
 
-  root: {
-    base,
+    root: base,
   },
+  buttons,
 }
