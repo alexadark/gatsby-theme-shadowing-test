@@ -11,4 +11,5 @@ export default {
   accent: lightBlue,
   beige: beige,
   text: darkBlue,
+  brand: `primary`,
 }

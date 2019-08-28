@@ -6,6 +6,7 @@ import PostEntryMedia from "./PostEntryMedia"
 import PostEntryContent from "./PostEntryContent"
 import PostEntryMeta from "./PostEntryMeta"
 import PostEntryInfo from "./PostEntryInfo"
+import { Button } from "rebass"
 
 const PostEntry = ({ post, location, postsPrefix }) => {
   return (
@@ -26,12 +27,19 @@ const PostEntry = ({ post, location, postsPrefix }) => {
         <div className="entry-footer">
           <PostEntryMeta post={post} />
           {location !== "single" && (
-            <Link
-              to={`${postsPrefix}/${post.uri}`}
-              aria-label="Read More from this post"
+            <Button
+              variant="primary"
+              mr={2}
+              mt={2}
+              sx={{ a: { color: `white` } }}
             >
-              Read More
-            </Link>
+              <Link
+                to={`${postsPrefix}/${post.uri}`}
+                aria-label="Read More from this post"
+              >
+                Read More
+              </Link>
+            </Button>
           )}
         </div>
       </div>

@@ -8,9 +8,11 @@ import Header from "./Header.js"
 import Footer from "./Footer.js"
 
 import { Layout as StyledLayout, Container } from "theme-ui"
+import { Grommet } from "grommet"
+import theme from "../gatsby-plugin-theme-ui"
 
 const Layout = ({ children }) => (
-  <>
+  <Grommet theme={theme} plain>
     <Global styles={GlobalStyles} />
 
     <StyledLayout>
@@ -18,7 +20,7 @@ const Layout = ({ children }) => (
       <Container>{children}</Container>
       <Footer />
     </StyledLayout>
-  </>
+  </Grommet>
 )
 
 export default Layout
