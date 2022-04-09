@@ -34,7 +34,7 @@
     "gatsby-transformer-sharp": "^2.2.5",
     "grommet": "^2.7.6",
     "grommet-icons": "^4.3.0",
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "polished": "^3.4.1",
     "react-burger-menu": "^2.6.11",
     "react-headroom": "^2.2.8",
