@@ -12,7 +12,7 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },
   "dependencies": {
-    "gatsby": "^2.13.1",
+    "gatsby": "^2.32.13",
     "@alexadark/gatsby-theme-wordpress-blog": "*",
     "lodash.merge": "^4.6.2",
     "react": "^16.8.6",
